@@ -1,0 +1,2401 @@
+WARNING:fake_useragent:Error occurred during loading data. Trying to use cache server https://fake-useragent.herokuapp.com/browsers/0.1.11
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\fake_useragent\utils.py", line 67, in get
+    context=context,
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1345, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1320, in do_open
+    r = h.getresponse()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\fake_useragent\utils.py", line 166, in load
+    verify_ssl=verify_ssl,
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\fake_useragent\utils.py", line 122, in get_browser_versions
+    verify_ssl=verify_ssl,
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\fake_useragent\utils.py", line 84, in get
+    raise FakeUserAgentError('Maximum amount of retries reached')
+fake_useragent.errors.FakeUserAgentError: Maximum amount of retries reached
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAFB358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957688004294640793/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAFB358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957688004294640793/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAFB358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAB6D128>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/8941799635/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAB6D128>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 818, in follow
+    follow = self.s.post(url_follow)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/8941799635/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAB6D128>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:get_media_id_recent_feed
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAB6D3C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAB6D3C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 1333, in get_media_id_recent_feed
+    r = self.s.get(url_tag)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAB6D3C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957687551453895692/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957687551453895692/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2048>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/8103820704/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2048>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 818, in follow
+    follow = self.s.post(url_follow)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/8103820704/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2048>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:get_media_id_recent_feed
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD23C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD23C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 1333, in get_media_id_recent_feed
+    r = self.s.get(url_tag)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD23C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2438>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957687247475543366/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2438>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957687247475543366/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2438>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957687213105880020/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957687213105880020/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2320>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957687095214332252/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2320>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957687095214332252/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD2320>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD23C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957686929514195087/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD23C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957686929514195087/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002B3BAAD23C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDA1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/413497500/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDA1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 818, in follow
+    follow = self.s.post(url_follow)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/413497500/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDA1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDA5C0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957032051094238470/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDA5C0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957032051094238470/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDA5C0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDAB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957031503965647002/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDAB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957031503965647002/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDAB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDAD30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957029566883116297/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDAD30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1957029566883116297/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDAD30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDAB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1956935713108695021/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDAB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1956935713108695021/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41CDAB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5CF8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1956901067981397694/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5CF8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1956901067981397694/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5CF8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1956880380078843012/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1956880380078843012/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5358>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5978>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1956862107047730574/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5978>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1956862107047730574/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5978>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5F28>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1956854360160154509/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5F28>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1956854360160154509/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002AD41DB5F28>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A58A1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /explore/tags/puglife/?__a=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A58A1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 568, in get_media_id_by_tag
+    r = self.s.get(url_tag)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /explore/tags/puglife/?__a=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A58A1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A5EC470>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /explore/tags/chuao/?__a=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A5EC470>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 568, in get_media_id_by_tag
+    r = self.s.get(url_tag)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /explore/tags/chuao/?__a=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A5EC470>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A5EC630>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /explore/tags/chocolate/?__a=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A5EC630>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 568, in get_media_id_by_tag
+    r = self.s.get(url_tag)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /explore/tags/chocolate/?__a=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A5EC630>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A58AB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /explore/tags/caracas/?__a=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A58AB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 568, in get_media_id_by_tag
+    r = self.s.get(url_tag)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /explore/tags/caracas/?__a=1 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002413A58AB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on auto_unfollow!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 320, in begin
+    self.headers = self.msg = parse_headers(self.fp)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 205, in parse_headers
+    line = fp.readline(_MAXLINE + 1)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\contrib\pyopenssl.py", line 299, in recv_into
+    raise SocketError(str(e))
+OSError: (10054, 'WSAECONNRESET')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 320, in begin
+    self.headers = self.msg = parse_headers(self.fp)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 205, in parse_headers
+    line = fp.readline(_MAXLINE + 1)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\contrib\pyopenssl.py", line 299, in recv_into
+    raise SocketError(str(e))
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError("(10054, 'WSAECONNRESET')"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 1128, in auto_unfollow
+    r = self.s.get(url_tag)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError("(10054, 'WSAECONNRESET')"))
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 320, in begin
+    self.headers = self.msg = parse_headers(self.fp)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 205, in parse_headers
+    line = fp.readline(_MAXLINE + 1)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\contrib\pyopenssl.py", line 299, in recv_into
+    raise SocketError(str(e))
+OSError: (10054, 'WSAECONNRESET')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 320, in begin
+    self.headers = self.msg = parse_headers(self.fp)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 205, in parse_headers
+    line = fp.readline(_MAXLINE + 1)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\contrib\pyopenssl.py", line 299, in recv_into
+    raise SocketError(str(e))
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError("(10054, 'WSAECONNRESET')"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 568, in get_media_id_by_tag
+    r = self.s.get(url_tag)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError("(10054, 'WSAECONNRESET')"))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A0F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959117476316257901/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A0F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959117476316257901/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A0F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/8528190006/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 818, in follow
+    follow = self.s.post(url_follow)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/8528190006/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:get_media_id_recent_feed
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A860>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A860>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 1333, in get_media_id_recent_feed
+    r = self.s.get(url_tag)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A860>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on auto_unfollow!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66ADA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /dulce_tentacion.ok/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66ADA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 1128, in auto_unfollow
+    r = self.s.get(url_tag)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /dulce_tentacion.ok/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66ADA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66AD30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959109102554652847/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66AD30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959109102554652847/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66AD30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/504008815/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 818, in follow
+    follow = self.s.post(url_follow)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/504008815/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A0F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959105591781477107/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A0F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959105591781477107/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A0F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66ABE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959097571549379583/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66ABE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959097571549379583/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66ABE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A7F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959090071202558598/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A7F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959090071202558598/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A7F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959068955054420558/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959068955054420558/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A860>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959063153753178793/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A860>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959063153753178793/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A860>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A438>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959052542509285376/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A438>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959052542509285376/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A438>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A828>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959051847285279989/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A828>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959051847285279989/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66A828>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66AD30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959046384340181387/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66AD30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959046384340181387/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66AD30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66AAC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959038606546942270/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66AAC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 778, in like
+    like = self.s.post(url_likes)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Kommunik\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1959038606546942270/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000027D9C66AAC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
+ERROR:root:get_media_id_by_tag
+Traceback (most recent call last):
+  File "C:\Users\Kommunik\instabot\src\instabot.py", line 570, in get_media_id_by_tag
+    self.media_by_tag = list(all_data['graphql']['hashtag']['edge_hashtag_to_media']['edges'])
+KeyError: 'graphql'
