@@ -11,15 +11,15 @@ from src.unfollow_protocol import unfollow_protocol
 from src.likers_protocol import likers_protocol
 
 bot = InstaBot(
-    login="wildloveec",
-    password="xxxx",
-    like_per_day=100,
-    comments_per_day=50,
-    tag_list=['guayarte', 'malecóndelsalado', 'guayaquilesmidestino', 'ecuadorian', 'soltera','foreveralone', 'ecuadoriangirl','musicagye', 'noviascuenca', 'cantanteguayaquil','ecuador🇪🇨', 
-     'samborondon', 'barcelonasportingclub', 'ecuatoriana', 'guayaquileña', 'allyouneedisecuador', 'cangrejal', 'quiteña', 'manaba', 'gye', '#mitaddelmundo','uio', 'montañita', 'smoothjazz'],
+    login="migasbakery",
+    password="18933056",
+    like_per_day=500,
+    comments_per_day=150,
+    tag_list=['sincelejo', 'sucre', 'panaderia', 'bakery', 'desayuno','🇨🇴', 'barranquilla','colombianasoy', 'noviascuenca', 'desayunos', 
+     'postre', 'colombia', 'sabana', 'costacaribe', 'colombiana', 'cumpleañosfeliz🇨🇴', 'cucuta', 'bellacolombiana', 'pan', 'brunch'],
     tag_blacklist=['rain', 'thunderstorm'],
     user_blacklist={},
-    max_like_for_one_tag=100,
+    max_like_for_one_tag=50,
     follow_per_day=5,
     follow_time=1 * 30 * 60,
     unfollow_per_day=2,
@@ -34,10 +34,10 @@ bot = InstaBot(
                   ["es", "luce", "se siente", "es realmente"],
                   ["hermosa", "super", "genial", "atrevida", "bella", "wow",
                    "WOW", "cool", "Grandiosa","magnifica", "magica",
-                   "muy buena", "maravillosa", "atrevida",
-                    "romantica", "glamorosa",
+                   "muy buena", "maravillosa", "foodie",
+                    "romantica", 
                     "adorable", "excelente", "amazing"],
-                  ["🐇", "..", "🔥..", "!", "🔥!!", "🐇🐇!"]],
+                  ["🇨🇴", "..", "🇨🇴..", "!", "🇨🇴!!", "🇨🇴!"]],
     # Use unwanted_username_list to block usernames containing a string
     ## Will do partial matches; i.e. 'mozart' will block 'legend_mozart'
     ### 'free_followers' will be blocked because it contains 'free'
