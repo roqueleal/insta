@@ -12,7 +12,7 @@ from src.likers_protocol import likers_protocol
 
 bot = InstaBot(
     login="wildloveec",
-    password="wildloveecuador2568",
+    password="xxxx",
     like_per_day=100,
     comments_per_day=50,
     tag_list=['guayarte', 'malecóndelsalado', 'guayaquilesmidestino', 'ecuadorian', 'soltera','foreveralone', 'ecuadoriangirl','musicagye', 'noviascuenca', 'cantanteguayaquil','ecuador🇪🇨', 
